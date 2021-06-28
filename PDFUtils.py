@@ -25,7 +25,10 @@
     Module with some misc functions
 '''
 
-import os, re, htmlentitydefs, json, urllib, urllib2
+# import os, re, htmlentitydefs, json, urllib, urllib2
+
+import os, re, json, urllib, urllib.request
+
 
 def clearScreen():
 	'''
@@ -316,7 +319,7 @@ def numToHex(num, numBytes):
 	'''
     hexString = ''
     if not isinstance(num,int):
-    	return (-1,'Bad number')
+        return (-1,'Bad number')
     try:
 	    hexNumber = hex(num)[2:]
 	    if len(hexNumber) % 2 != 0:
@@ -325,7 +328,7 @@ def numToHex(num, numBytes):
 	        hexString += chr(int(hexNumber[i]+hexNumber[i+1],16))
 	    hexString = '\0'*(numBytes-len(hexString))+hexString
     except:
-		return (-1,'Error in hexadecimal conversion')
+	    return (-1,'Error in hexadecimal conversion')
     return (0,hexString)
                   		
 def numToString(num, numDigits):
@@ -345,35 +348,35 @@ def numToString(num, numDigits):
 		strNum = '0' + strNum
 	return (0,strNum)
 
-def unescapeHTMLEntities(text):
-    '''
-        Removes HTML or XML character references and entities from a text string.
+# def unescapeHTMLEntities(text):
+#     '''
+#         Removes HTML or XML character references and entities from a text string.
         
-        @param text The HTML (or XML) source text.
-        @return The plain text, as a Unicode string, if necessary.
+#         @param text The HTML (or XML) source text.
+#         @return The plain text, as a Unicode string, if necessary.
         
-        Author: Fredrik Lundh
-        Source: http://effbot.org/zone/re-sub.htm#unescape-html
-    '''
-    def fixup(m):
-        text = m.group(0)
-        if text[:2] == "&#":
-            # character reference
-            try:
-                if text[:3] == "&#x":
-                    return unichr(int(text[3:-1], 16))
-                else:
-                    return unichr(int(text[2:-1]))
-            except ValueError:
-                pass
-        else:
-            # named entity
-            try:
-                text = unichr(htmlentitydefs.name2codepoint[text[1:-1]])
-            except KeyError:
-                pass
-        return text # leave as is
-    return re.sub("&#?\w+;", fixup, text)
+#         Author: Fredrik Lundh
+#         Source: http://effbot.org/zone/re-sub.htm#unescape-html
+#     '''
+#     def fixup(m):
+#         text = m.group(0)
+#         if text[:2] == "&#":
+#             # character reference
+#             try:
+#                 if text[:3] == "&#x":
+#                     return unichr(int(text[3:-1], 16))
+#                 else:
+#                     return unichr(int(text[2:-1]))
+#             except ValueError:
+#                 pass
+#         else:
+#             # named entity
+#             try:
+#                 text = unichr(htmlentitydefs.name2codepoint[text[1:-1]])
+#             except KeyError:
+#                 pass
+#         return text # leave as is
+#     return re.sub("&#?\w+;", fixup, text)
    
 def unescapeString(string):
 	'''

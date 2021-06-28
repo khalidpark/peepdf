@@ -31,7 +31,7 @@ import sys
 import os
 import optparse
 import re
-import urllib2
+import urllib.request
 import hashlib
 import traceback
 import json
@@ -83,14 +83,14 @@ def getRepPaths(url, path=''):
 
 def getLocalFilesInfo(filesList):
     localFilesInfo = {}
-    print '[-] Getting local files information...'
+    print ("[-] Getting local files information...")
     for path in filesList:
         absFilePath = os.path.join(absPeepdfRoot, path)
         if os.path.exists(absFilePath):
             content = open(absFilePath, 'rb').read()
             shaHash = hashlib.sha256(content).hexdigest()
             localFilesInfo[path] = [shaHash, absFilePath]
-    print '[+] Done'
+    print ('[+] Done')
     return localFilesInfo
 
 
@@ -422,7 +422,7 @@ try:
         staticColor = Fore.BLUE
         resetColor = Style.RESET_ALL
     if options.version:
-        print peepdfHeader
+        print (peepdfHeader)
     elif options.update:
         updated = False
         newVersion = ''
@@ -430,7 +430,7 @@ try:
         reVersion = 'version = \'(\d\.\d)\'\s*?revision = \'(\d+)\''
         repURL = 'https://api.github.com/repos/jesparza/peepdf/contents/'
         rawRepURL = 'https://raw.githubusercontent.com/jesparza/peepdf/master/'
-        print '[-] Checking if there are new updates...'
+        print ('[-] Checking if there are new updates...')
         try:
             remotePeepContent = urllib2.urlopen(rawRepURL + 'peepdf.py').read()
         except:
@@ -441,14 +441,14 @@ try:
         else:
             sys.exit('[x] Error getting the version number from the repository')
         if localVersion == newVersion:
-            print '[+] No changes! ;)'
+            print ('[+] No changes! ;)')
         else:
-            print '[+] There are new updates!!'
-            print '[-] Getting paths from the repository...'
+            print ('[+] There are new updates!!')
+            print ('[-] Getting paths from the repository...')
             pathNames = getRepPaths(repURL, '')
-            print '[+] Done'
+            print ('[+] Done')
             localFilesInfo = getLocalFilesInfo(pathNames)
-            print '[-] Checking files...'
+            print ('[-] Checking files...')
             for path in pathNames:
                 try:
                     fileContent = urllib2.urlopen(rawRepURL + path).read()
@@ -460,7 +460,7 @@ try:
                     shaHash = hashlib.sha256(fileContent).hexdigest()
                     if shaHash != localFilesInfo[path][0]:
                         open(localFilesInfo[path][1], 'wb').write(fileContent)
-                        print '[+] File "' + path + '" updated successfully'
+                        print ('[+] File "' + path + '" updated successfully')
                 else:
                     # File does not exist
                     index = path.rfind('/')
@@ -468,14 +468,14 @@ try:
                         dirsPath = path[:index]
                         absDirsPath = os.path.join(absPeepdfRoot, dirsPath)
                         if not os.path.exists(absDirsPath):
-                            print '[+] New directory "' + dirsPath + '" created successfully'
+                            print ('[+] New directory "' + dirsPath + '" created successfully')
                             os.makedirs(absDirsPath)
                     open(os.path.join(absPeepdfRoot, path), 'wb').write(fileContent)
-                    print '[+] New file "' + path + '" created successfully'
+                    print ('[+] New file "' + path + '" created successfully')
             message = '[+] peepdf updated successfully'
             if newVersion != '':
                 message += ' to ' + newVersion
-            print message
+            print (message)
 
     else:
         if len(args) == 1:
@@ -717,7 +717,7 @@ try:
                                 stats += '\t\t' + url + newLine
                         stats += newLine * 2
                 if fileName != None:
-                    print stats
+                    print (stats)
                 if options.isInteractive:
                     from PDFConsole import PDFConsole
 
@@ -729,7 +729,7 @@ try:
                             sys.exit()
                         except:
                             errorMessage = '*** Error: Exception not handled using the interactive console!! Please, report it to the author!!'
-                            print errorColor + errorMessage + resetColor + newLine
+                            print (errorColor + errorMessage + resetColor + newLine)
                             traceback.print_exc(file=open(errorsFile, 'a'))
 except Exception as e:
     if len(e.args) == 2:
@@ -739,7 +739,7 @@ except Exception as e:
     if excName == None or excName != 'PeepException':
         errorMessage = '*** Error: Exception not handled!!'
         traceback.print_exc(file=open(errorsFile, 'a'))
-    print errorColor + errorMessage + resetColor + newLine
+    print (errorColor + errorMessage + resetColor + newLine)
 finally:
     if os.path.exists(errorsFile):
         message = newLine + 'Please, don\'t forget to report the errors found:' + newLine * 2

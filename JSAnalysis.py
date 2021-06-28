@@ -30,8 +30,10 @@ import os
 import re
 import sys
 import traceback
+import PDFUtils
+import html
 
-from PDFUtils import unescapeHTMLEntities, escapeString
+from PDFUtils import escapeString
 
 try:
     import PyV8
@@ -73,7 +75,7 @@ def analyseJS(code, context=None, manualAnalysis=False):
     urlsFound = []
     
     try:
-        code = unescapeHTMLEntities(code)
+        code = unescape(code)
         scriptElements = re.findall(reJSscript, code, re.DOTALL | re.IGNORECASE)
         if scriptElements:
             code = ''
@@ -251,8 +253,8 @@ def unescape(escapedBytes, unicode = True):
     else:
         unicodePadding = ''
     try:
-        if escapedBytes.lower().find('%u') != -1 or escapedBytes.lower().find('\u') != -1 or escapedBytes.find('%') != -1:
-            if escapedBytes.lower().find('\u') != -1:
+        if escapedBytes.lower().find('%u') != -1 or escapedBytes.lower().find('\\u') != -1 or escapedBytes.find('%') != -1:
+            if escapedBytes.lower().find('\\u') != -1:
                 splitBytes = escapedBytes.split('\\')
             else:
                 splitBytes = escapedBytes.split('%')

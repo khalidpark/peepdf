@@ -1,0 +1,122 @@
+Traceback (most recent call last):
+  File "peepdf.py", line 722, in <module>
+    from PDFConsole import PDFConsole
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFConsole.py", line 147
+    print newLine + 'Leaving the Peepdf interactive console...Bye! ;)' + newLine
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(newLine + 'Leaving the Peepdf interactive console...Bye!)?
+Traceback (most recent call last):
+  File "peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
+Traceback (most recent call last):
+  File "peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
+Traceback (most recent call last):
+  File "peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
+Traceback (most recent call last):
+  File "peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
+Traceback (most recent call last):
+  File "peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
+Traceback (most recent call last):
+  File "peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
+Traceback (most recent call last):
+  File "peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
+Traceback (most recent call last):
+  File "peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
+Traceback (most recent call last):
+  File "peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
+Traceback (most recent call last):
+  File "./peepdf.py", line 722, in <module>
+    from PDFConsole import PDFConsole
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFConsole.py", line 147
+    print newLine + 'Leaving the Peepdf interactive console...Bye! ;)' + newLine
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(newLine + 'Leaving the Peepdf interactive console...Bye!)?
+Traceback (most recent call last):
+  File "./peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
+Traceback (most recent call last):
+  File "./peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
+Traceback (most recent call last):
+  File "./peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
+Traceback (most recent call last):
+  File "./peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
+Traceback (most recent call last):
+  File "./peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
+Traceback (most recent call last):
+  File "./peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
+Traceback (most recent call last):
+  File "./peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
+Traceback (most recent call last):
+  File "./peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
+Traceback (most recent call last):
+  File "./peepdf.py", line 494, in <module>
+    ret, pdf = pdfParser.parse(fileName, options.isForceMode, options.isLooseMode, options.isManualAnalysis)
+  File "C:\Users\YallaKOREA\Desktop\CODE\project\section6-2\pdf_parser\peepdf\peepdf\PDFCore.py", line 6863, in parse
+    pdfHeaderIndex = line.find('%PDF-')
+TypeError: argument should be integer or bytes-like object, not 'str'
